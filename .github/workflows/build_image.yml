@@ -27,7 +27,7 @@ jobs:
       - name: Read s6 version
         id: read_version
         run: |
-          raw_version="$(cat versions.txt | grep S6_VERSION | sed 's/S6_VERSION=//g')"
+          raw_version="$(cat version.txt | grep S6_VERSION | sed 's/S6_VERSION=//g')"
           version="$(echo "$raw_version" | sed 's/v//g')"
           echo "::set-output name=raw_version::$version"
           echo "::set-output name=version::$version"
